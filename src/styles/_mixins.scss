@@ -1,0 +1,14 @@
+@use "sass:math";
+//
+//font-adjustment
+@mixin font-size($sizeValue) {
+  font-size: $sizeValue + px;
+  font-size: math.div($sizeValue, 10) + rem;
+}
+
+@mixin flex($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}

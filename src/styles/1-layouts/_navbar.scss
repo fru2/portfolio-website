@@ -1,0 +1,26 @@
+@use '../mixins';
+
+// TODO: FIX WIDTH, it's overflowing
+nav {
+  @include mixins.flex(row);
+  position: absolute;
+  width: 100%;
+  justify-content: center;
+
+  button {
+    margin: 1rem 2rem {
+      right: auto;
+    }
+
+    background: url("../../assets/icons/menu.svg");
+    background-size: cover;
+  }
+
+
+  img {
+    height: 2.5rem;
+    margin: 1rem 0;
+    position: absolute;
+  }
+
+}
