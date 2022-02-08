@@ -1,11 +1,11 @@
-import NavBar from "./components/NavBar";
-import HomePage from "./pages/homePage/HomePage"
+import HomePage from "./pages/HomePage";
+import NavExtended from "./components/common/NavBarExpanded";
 
 function App() {
   return (
     <div className="App">
-      <NavBar></NavBar>
-      <HomePage></HomePage>
+      {/* <HomePage></HomePage> */}
+      <NavExtended></NavExtended>
     </div>
   );
 }

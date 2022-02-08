@@ -1,0 +1,40 @@
+@use '../mixins';
+@use "sass:math";
+// @import '../constants';
+
+.navbar-exp {
+  @include mixins.flex(row);
+  // align-items: flex-start;
+  height: 100%;
+
+  ul {
+    margin: 0 7rem;
+  }
+
+  ul:first-child>li {
+    margin-top: -1.5rem;
+  }
+
+  ul:first-child>li:first-child {
+    margin-top: 0;
+  }
+
+  li>a {
+    font-size: 6.5rem;
+  }
+
+  ul:last-child>li {
+    font-size: 1.6rem;
+    margin-top: 3rem;
+    line-height: 1.4;
+  }
+
+  ul:last-child>li:first-child {
+    margin-top: 0;
+  }
+
+  ul:last-child>li:last-child {
+    // color: $dull-white;
+  }
+
+}

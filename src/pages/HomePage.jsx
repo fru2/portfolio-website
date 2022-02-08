@@ -1,13 +1,17 @@
-import ButtonToggle from '../../components/ButtonToggle';
-import ParallaxGallery from '../../components/ParallaxGallery';
-import ProjectElements from "./ProjectsElement";
-import placeholder from "../../assets/images/placeholder.png";
-import WorkFlow from "./WorkFlow";
-import ButtonOutline from '../../components/ButtonOutline';
+import NavBar from '../components/common/NavBar';
+import ButtonToggle from '../components/common/ButtonToggle';
+import ProjectElements from "../components/homePage/ProjectsElement";
+import WorkFlow from "../components/homePage/WorkFlow";
+import ButtonOutline from '../components/common/ButtonOutline';
+
+import placeholder from "../assets/images/placeholder.png";
+
+// TODO: Add navbar in this file only
 
 export default function HomePage() {
   return (
     <main>
+      <NavBar />
       <header>
         <h1>Template</h1>
 

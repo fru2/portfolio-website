@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function NavBarExpanded() {
   return (
-    <nav>
+    <nav className='navbar-exp'>
       <ul>
         <li><a href="#">About</a></li>
         <li><a href="#">Project</a></li>
