@@ -5,14 +5,14 @@ export default function ProjectsElement(props) {
   const { id, imgSrc, title, desc } = props;
 
   return (
-    <article>
+    <article className='element-container'>
       <div>
-        <p>{id}</p> {/* container number */}
+        <p className='heading-txt'>{id}</p> {/* container number */}
         <img src={imgSrc} alt="project thumbnail" />
       </div>
       <div>
         <h4>{title}</h4>
-        <p>{desc}</p>
+        <p className='body-txt'>{desc}</p>
       </div>
     </article>
   );

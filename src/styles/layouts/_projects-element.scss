@@ -1,0 +1,57 @@
+@use '../constants';
+
+// TODO: Explicity declare the width and hight of image.
+
+.element-container {
+
+  margin-left: 4rem;
+  margin-top: 12rem;
+  display: flex;
+  flex-direction: row;
+
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+
+    >div:last-child {
+      margin-left: 0;
+    }
+
+  }
+
+
+  >div:first-child {
+
+    p {
+      position: absolute;
+      margin: 0 1.5rem;
+      margin-top: -3.5rem;
+      color: constants.$dull-white;
+      font-weight: 400 !important;
+    }
+
+    // img {
+    //   max-width: 100px;
+    // }
+
+  }
+
+
+  >div:last-child {
+    margin: 3rem;
+    margin-right: 0;
+
+    p {
+      margin-top: 1rem;
+      max-width: 100% !important;
+    }
+
+    h4 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 2rem;
+      color: constants.$white;
+    }
+
+  }
+
+}

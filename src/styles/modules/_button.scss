@@ -1,6 +1,6 @@
 @use '../constants';
 
-.toggle-btn {
+.outline-btn {
   min-width: 10rem;
   cursor: pointer;
   color: constants.$white;
@@ -12,7 +12,7 @@
   border-radius: 16px;
 }
 
-.toggle-btn-active {
+.btn-active {
   background: constants.$white;
   color: constants.$black;
 }

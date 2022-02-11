@@ -1,9 +1,10 @@
 @use '../mixins';
+@use '../constants';
 
 // TODO: FIX WIDTH, it's overflowing
 .main-nav {
   @include mixins.flex(row);
-  position: absolute;
+  position: fixed;
   width: 100%;
   justify-content: center;
 
@@ -14,6 +15,9 @@
 
     background: url("../../assets/icons/menu.svg");
     background-size: cover;
+    height: 30px;
+    width: 30px;
+    border: none;
   }
 
 
