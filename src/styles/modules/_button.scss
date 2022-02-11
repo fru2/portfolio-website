@@ -1,6 +1,18 @@
-button {
-  border: none;
-  height: 2rem;
-  width: 2rem;
+@use '../constants';
+
+.toggle-btn {
+  min-width: 10rem;
   cursor: pointer;
+  color: constants.$white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.0rem;
+  padding: 0.5rem;
+  background: none;
+  border: 1px constants.$white solid;
+  border-radius: 16px;
+}
+
+.toggle-btn-active {
+  background: constants.$white;
+  color: constants.$black;
 }

@@ -23,12 +23,16 @@ p {
 .heading-txt {
   font-size: 6rem;
   font-weight: 500;
-  color: constants.$white;
+  max-width: 80%;
+  line-height: 1.2;
 }
 
 .body-txt {
+  margin-top: 16px;
+  font-family: 'Rubik', sans-serif;
   font-size: 1.6rem;
-  line-height: 1.4;
+  line-height: 1.5;
   font-weight: 300;
   color: constants.$dull-white;
+  max-width: 50%;
 }

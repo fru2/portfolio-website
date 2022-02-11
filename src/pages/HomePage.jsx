@@ -14,6 +14,7 @@ export default function HomePage() {
     <main>
       <NavBar />
 
+
       <header>
         <div className="hero-image"></div>
 
@@ -29,9 +30,10 @@ export default function HomePage() {
 
       </header>
 
-      <section>
-        <h1>I Design and Create Websites</h1>
-        <p>I love creating, whether it's writing code for a website or making an art piece. Lorem ipsum dummy text is here (change it.)</p>
+      <section className='what-section container'>
+        <h1 className='heading-txt'>I Design and Create Websites</h1>
+        {/* <h1 className='heading-txt'></h1> */}
+        <p className='body-txt'>I love creating, whether it's writing code for a website or making an art piece. Lorem ipsum dummy text is here (change it.)</p>
         <div>
           <ButtonToggle text="Front-end" />
           <ButtonToggle text="UX-UI" />
