@@ -4,8 +4,8 @@ import NavExtended from "./components/common/NavBarExpanded";
 function App() {
   return (
     <div className="App">
-      {/* <HomePage></HomePage> */}
-      <NavExtended></NavExtended>
+      <HomePage></HomePage>
+      {/* <NavExtended></NavExtended> */}
     </div>
   );
 }

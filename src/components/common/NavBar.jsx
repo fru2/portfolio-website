@@ -3,7 +3,7 @@ import Logo from '../../assets/Branding.svg'
 
 export default function NavBar() {
     return (
-        <nav>
+        <nav className='main-nav'>
             <button className='icon-btn'>
             </button>
 

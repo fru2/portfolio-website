@@ -6,20 +6,25 @@ import ButtonOutline from '../components/common/ButtonOutline';
 
 import placeholder from "../assets/images/placeholder.png";
 
-// TODO: Add navbar in this file only
+import BehanceLogo from '../assets/icons/behance.svg';
+import CodepenLogo from '../assets/icons/codepen.svg';
 
 export default function HomePage() {
   return (
     <main>
       <NavBar />
-      <header>
-        <h1>Template</h1>
 
+      <header>
         <div className="hero-image"></div>
 
-        <div className="backdrop-text">
-          <h1>設計</h1>
-          <h1>Design</h1>
+        <div className="hero-txt">
+          <h3>Hi there</h3>
+          <h1>I'm Utsav</h1>
+        </div>
+
+        <div class="social-links">
+          <a href="https://codepen.com/" target="_blank" rel="noopener noreferrer"><img src={CodepenLogo} alt="Codepen nav link" /></a>
+          <a href="https://behance.net/" target="_blank" rel="noopener noreferrer"><img src={BehanceLogo} alt="Behance nav link" /></a>
         </div>
 
       </header>

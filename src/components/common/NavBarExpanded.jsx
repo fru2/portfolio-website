@@ -15,7 +15,7 @@ export default function NavBarExpanded() {
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur ipsam facilis quas vel rerum, ducimus harum hic aliquam mollitia sequi aperiam eius fuga? Unde, maiores. Aperiam eaque illum eos.</p>
         </li>
         <li>
-          <p>ABC - 2022</p>
+          <p>© ABC - 2022</p>
           <p>Placeholder address here</p>
           <p>India</p>
         </li>

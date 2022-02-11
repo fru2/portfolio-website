@@ -1,10 +1,10 @@
 @use '../mixins';
 @use "sass:math";
-// @import '../constants';
+@use '../constants';
 
 .navbar-exp {
   @include mixins.flex(row);
-  // align-items: flex-start;
+  justify-content: space-between;
   height: 100%;
 
   ul {
@@ -34,7 +34,7 @@
   }
 
   ul:last-child>li:last-child {
-    // color: $dull-white;
+    color: constants.$dull-white;
   }
 
 }

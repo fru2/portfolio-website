@@ -1,59 +1,45 @@
 @use "../mixins";
-@import "../constants";
+@use "../constants";
 
 header {
   height: 100vh !important;
   width: 100%;
-  background: $primary-gradient;
+  // background: constants.$primary-gradient;
   @include mixins.flex(row);
 
+  h3 {
+    @include mixins.font-size(32);
+    font-weight: 200;
+    color: constants.$dull-white;
+  }
 
-  // ">" is used to select only the direct decendent of header tag. Here "+" can also be used because h1 directly follows the header.
-  >h1 {
+
+  h1 {
+    @include mixins.font-size(54);
+    margin-top: -1.6rem;
+  }
+
+  .social-links {
     position: absolute;
-    @include mixins.font-size(40);
+    bottom: 0;
+    right: 0;
+    padding: 1.5rem 2rem;
+  }
+
+  .social-links a {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+  }
+
+  .social-links a:first-child {
+    margin-right: 1rem;
   }
 
   .hero-image {
     height: 65vh;
     width: 65vh;
-    background-color: $dull-white;
-    margin-left: auto;
-    position: fixed;
-    right: 50%;
-    margin-right: 4px;
-  }
-
-  .backdrop-text {
-    color: $dull-white;
-    text-transform: uppercase;
-    margin-right: auto;
-    position: absolute;
-    left: 50%;
-    margin-left: 4px;
-
-    h1 {
-      @include mixins.font-size(120);
-    }
-
-    h1:first-child {
-      display: block;
-    }
-
-    h1:last-child {
-      display: none;
-      font-family: 'Bebas Neue', cursive;
-      margin-top: 1.5rem;
-    }
-
-    &:hover {
-      h1:first-child {
-        display: none;
-      }
-
-      h1:last-child {
-        display: block;
-      }
-    }
+    background-color: constants.$dull-white;
+    margin-right: 80px;
   }
 }

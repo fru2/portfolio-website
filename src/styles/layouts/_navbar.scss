@@ -1,7 +1,7 @@
 @use '../mixins';
 
 // TODO: FIX WIDTH, it's overflowing
-nav {
+.main-nav {
   @include mixins.flex(row);
   position: absolute;
   width: 100%;
@@ -21,6 +21,10 @@ nav {
     margin-top: 0.5rem;
     height: 2.5rem;
     position: absolute;
+  }
+
+  a {
+    margin: 1rem 2rem;
   }
 
 }

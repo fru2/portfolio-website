@@ -1,13 +1,13 @@
 @use "layouts"as layouts;
 @use "modules"as modules;
-@import "./constants";
+@use "./constants";
 
 ::-webkit-scrollbar-track {
   width: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-  color: $white;
+  color: constants.$white;
 }
 
 * {
@@ -19,8 +19,8 @@ body {
   font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: $black;
-  color: $white;
+  background: constants.$black;
+  color: constants.$white;
 }
 
 code {

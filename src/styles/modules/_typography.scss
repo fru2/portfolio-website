@@ -1,4 +1,6 @@
 @use '../mixins';
+@use '../constants';
+
 h1,
 h2,
 h3,
@@ -10,10 +12,23 @@ h6 {
 }
 
 h1 {
-  font-weight: 600;
+  font-weight: 500;
   @include mixins.font-size(32);
 }
 
 p {
   font-family: 'Rubik', sans-serif;
+}
+
+.heading-txt {
+  font-size: 6rem;
+  font-weight: 500;
+  color: constants.$white;
+}
+
+.body-txt {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  font-weight: 300;
+  color: constants.$dull-white;
 }
