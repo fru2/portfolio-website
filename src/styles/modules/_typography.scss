@@ -36,3 +36,14 @@ p {
   color: constants.$dull-white;
   max-width: 50%;
 }
+
+@media screen and (max-width: 768px) {
+  .heading-txt {
+    font-size: 4rem;
+    max-width: 100%;
+  }
+
+  .body-txt {
+    max-width: 100%;
+  }
+}

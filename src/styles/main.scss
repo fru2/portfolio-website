@@ -32,3 +32,9 @@ code {
   padding: 80px;
   box-sizing: border-box;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 32px;
+  }
+}
