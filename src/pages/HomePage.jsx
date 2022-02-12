@@ -19,7 +19,7 @@ export default function HomePage() {
         <div className="hero-image"></div>
 
         <div className="hero-txt">
-          <h3>Hi there</h3>
+          <h3>Hi</h3>
           <h1>I'm Utsav</h1>
         </div>
 
@@ -30,23 +30,23 @@ export default function HomePage() {
 
       </header>
 
-      <section className='what-section container'>
-        <h1 className='heading-txt'>I Design and Create Websites</h1>
-        {/* <h1 className='heading-txt'></h1> */}
-        <p className='body-txt'>I love creating, whether it's writing code for a website or making an art piece. Lorem ipsum dummy text is here (change it.)</p>
+      {/* <section className='what-section container'>
+        <h1 className='heading-txt'>I Design and Create Websites</h1> */}
+      {/* <h1 className='heading-txt'></h1> */} {/* DO NOT UNCOMMENT */}
+      {/* <p className='body-txt'>I love creating, whether it's writing code for a website or making an art piece. Lorem ipsum dummy text is here (change it.)</p>
         <div>
           <ButtonToggle text="Front-end" />
           <ButtonToggle text="UX-UI" />
           <ButtonToggle text="Fine arts" />
-        </div>
-        {/* <ParallaxGallery img1={} img2={} img3={}/> */}
-      </section>
+        </div> */}
+      {/* <ParallaxGallery img1={} img2={} img3={}/> */}{/* DO NOT UNCOMMENT */}
+      {/* </section> */}
 
 
       {/* TODO: Contents beyond this point will change as per the selected toggle button */}
 
       {/* TODO: remove this section statically typed content.*/}
-      <section className='work-section container'>
+      {/* <section className='work-section container'>
         <h1 className='heading-txt'>Projects</h1>
         <ProjectElements id="1" imgSrc={placeholder} title="Project title" desc="Short description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed " />
         <ProjectElements id="2" imgSrc={placeholder} title="Project title" desc="Short description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed " />
@@ -64,7 +64,7 @@ export default function HomePage() {
         <h1 className='heading-txt'>Let's conntect</h1>
         <p className='body-txt'>If you have reached this far, then wouldn't it be great if we can have a chat. Or maybe we can work together to build something ;)</p>
         <ButtonOutline text="Email" />
-      </section>
+      </section> */}
 
     </main>
   );
