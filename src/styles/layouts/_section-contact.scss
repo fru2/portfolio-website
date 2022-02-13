@@ -15,3 +15,23 @@
     margin-top: 1.8rem;
   }
 }
+
+
+@media screen and (max-width: 768px) {
+  .contact-section {
+    margin-left: 0;
+
+    p {
+      max-width: 100%;
+    }
+
+    h1 {
+      max-width: 100%;
+    }
+
+    button {
+      margin-top: 1.4rem;
+    }
+  }
+
+}

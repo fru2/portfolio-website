@@ -51,7 +51,7 @@ export default function HomePage() {
         <ProjectElements id="1" imgSrc={placeholder} title="Project title" desc="Short description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed " />
         <ProjectElements id="2" imgSrc={placeholder} title="Project title" desc="Short description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed " />
         <ProjectElements id="3" imgSrc={placeholder} title="Project title" desc="Short description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed " />
-      </section>
+      </section> */}
 
 
       <section className='how-section container'>
@@ -64,7 +64,7 @@ export default function HomePage() {
         <h1 className='heading-txt'>Let's conntect</h1>
         <p className='body-txt'>If you have reached this far, then wouldn't it be great if we can have a chat. Or maybe we can work together to build something ;)</p>
         <ButtonOutline text="Email" />
-      </section> */}
+      </section>
 
     </main>
   );
