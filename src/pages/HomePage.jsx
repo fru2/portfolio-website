@@ -46,12 +46,12 @@ export default function HomePage() {
       {/* TODO: Contents beyond this point will change as per the selected toggle button */}
 
       {/* TODO: remove this section statically typed content.*/}
-      {/* <section className='work-section container'>
+      <section className='work-section container'>
         <h1 className='heading-txt'>Projects</h1>
         <ProjectElements id="1" imgSrc={placeholder} title="Project title" desc="Short description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed " />
         <ProjectElements id="2" imgSrc={placeholder} title="Project title" desc="Short description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed " />
         <ProjectElements id="3" imgSrc={placeholder} title="Project title" desc="Short description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed " />
-      </section> */}
+      </section>
 
 
       <section className='how-section container'>

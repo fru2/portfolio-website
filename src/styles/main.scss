@@ -37,4 +37,8 @@ code {
   .container {
     padding: 32px;
   }
+
+  .container+.container {
+    margin-top: 4rem;
+  }
 }
