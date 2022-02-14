@@ -10,6 +10,8 @@ export default function NavBarExpanded() {
         <li><a href="#">Contact</a></li>
       </ul>
 
+      <button className='icon-btn'></button>
+
       <ul>
         <li>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur ipsam facilis quas vel rerum, ducimus harum hic aliquam mollitia sequi aperiam eius fuga? Unde, maiores. Aperiam eaque illum eos.</p>

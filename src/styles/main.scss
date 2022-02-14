@@ -2,12 +2,13 @@
 @use "modules"as modules;
 @use "./constants";
 
-::-webkit-scrollbar-track {
-  width: 4px;
+::-webkit-scrollbar {
+  width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  color: constants.$white;
+  background: #3c3e40;
+  border-radius: 8px;
 }
 
 * {

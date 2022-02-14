@@ -2,10 +2,14 @@
 @use "sass:math";
 @use '../constants';
 
+
 .navbar-exp {
   @include mixins.flex(row);
   justify-content: space-between;
-  height: 100%;
+  height: 100vh;
+  background-color: constants.$black;
+  position: fixed;
+  z-index: 100;
 
   ul {
     margin: 0 7rem;
@@ -35,6 +39,56 @@
 
   ul:last-child>li:last-child {
     color: constants.$dull-white;
+  }
+
+  .icon-btn {
+    margin: 1rem 2rem;
+    background: url("../../assets/icons/close.svg");
+    background-size: cover;
+    height: 2rem;
+    width: 2rem;
+    border: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .navbar-exp {
+    margin-left: 0;
+
+    padding: 32px {
+      top: 5rem;
+    }
+
+    ;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    ul {
+      margin: 0;
+    }
+
+    ul:last-child {
+      margin-top: 2rem;
+    }
+
+    ul:first-child li {
+      padding: 0.5rem 0;
+    }
+
+    ul:last-child {
+      font-weight: 300;
+    }
+
+    li>a {
+      font-size: 4rem;
+    }
   }
 
 }

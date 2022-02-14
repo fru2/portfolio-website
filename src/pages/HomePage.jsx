@@ -3,6 +3,7 @@ import ButtonToggle from '../components/common/ButtonToggle';
 import ProjectElements from "../components/homePage/ProjectsElement";
 import WorkFlow from "../components/homePage/WorkFlow";
 import ButtonOutline from '../components/common/ButtonOutline';
+import NavExtended from "../components/common/NavBarExpanded";
 
 import placeholder from "../assets/images/placeholder.png";
 
@@ -12,6 +13,7 @@ import CodepenLogo from '../assets/icons/codepen.svg';
 export default function HomePage() {
   return (
     <main>
+      {/* <NavExtended /> */}
       <NavBar />
 
 
