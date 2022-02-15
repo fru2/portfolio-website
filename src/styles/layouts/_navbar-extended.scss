@@ -10,6 +10,7 @@
   background-color: constants.$black;
   position: fixed;
   z-index: 100;
+  display: none;
 
   ul {
     margin: 0 7rem;
@@ -51,6 +52,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    cursor: pointer;
   }
 
 }

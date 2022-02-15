@@ -11,10 +11,19 @@ import BehanceLogo from '../assets/icons/behance.svg';
 import CodepenLogo from '../assets/icons/codepen.svg';
 
 export default function HomePage() {
+
+  const expandNavbar = () => {
+    document.querySelector('.navbar-exp').style.display = 'flex';
+  }
+
+  const closeNavbar = () => {
+    document.querySelector('.navbar-exp').style.display = 'none';
+  }
+
   return (
     <main>
-      {/* <NavExtended /> */}
-      <NavBar />
+      <NavExtended onclick={closeNavbar} />
+      <NavBar onclick={expandNavbar} />
 
 
       <header>
@@ -25,7 +34,7 @@ export default function HomePage() {
           <h1>I'm Utsav</h1>
         </div>
 
-        <div class="social-links">
+        <div className="social-links">
           <a href="https://codepen.com/" target="_blank" rel="noopener noreferrer"><img src={CodepenLogo} alt="Codepen nav link" /></a>
           <a href="https://behance.net/" target="_blank" rel="noopener noreferrer"><img src={BehanceLogo} alt="Behance nav link" /></a>
         </div>

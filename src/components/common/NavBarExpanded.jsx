@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function NavBarExpanded() {
+export default function NavBarExpanded(props) {
   return (
     <nav className='navbar-exp'>
       <ul>
@@ -10,7 +10,7 @@ export default function NavBarExpanded() {
         <li><a href="#">Contact</a></li>
       </ul>
 
-      <button className='icon-btn'></button>
+      <button className='icon-btn' onClick={props.onclick}></button>
 
       <ul>
         <li>
