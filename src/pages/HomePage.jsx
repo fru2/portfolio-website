@@ -20,6 +20,8 @@ export default function HomePage() {
     document.querySelector('.navbar-exp').style.display = 'none';
   }
 
+  // FIXME: Make the image responsive and add media query for tablet sized devices.
+
   return (
     <main>
       <NavExtended onclick={closeNavbar} />
