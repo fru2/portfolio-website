@@ -19,14 +19,15 @@ export default function ProjectPage(props) {
 
 
 
-      <article className='bg-black container'>
-        <h1 className='heading-txt'>Apple</h1>
-        <p className='body-txt'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere numquam accusamus repudiandae delectus minima ducimus, pariatur, deserunt quas sequi sunt ullam. Debitis maxime explicabo odio fuga nam! Architecto, excepturi harum.</p>
+      <article className='about-project bg-black-gradient container'>
+        <h1 className='heading-txt'>Project title here</h1>
+        <p className='body-txt'>Project short description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
 
         <div className="project-overview">
           <div className="project-overview-item">
             <p>Role</p>
-            <h3>Front-end (react), UI design</h3>
+            <h3>Front-end (react)</h3>
+            <h3>UI Design</h3>
           </div>
           <div className="project-overview-item">
             <p>Type</p>

@@ -19,12 +19,42 @@
     }
   }
 
-  .bg-black {
-    background-color: constants.$black;
+  .bg-black-gradient {
     background: linear-gradient(to bottom,
         #0D0F1300,
         #0D0F13 25%);
     padding-top: 80px;
+  }
+
+  article {
+    background-color: constants.$black;
+  }
+
+
+  .about-project {
+
+
+    .project-overview {
+      @include mixins.flex(row);
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 60px;
+      flex-wrap: wrap;
+      max-width: 52%;
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+
+    .project-overview-item {
+      margin: 24px {
+        left: 0;
+        right: 60px;
+      }
+    }
+
+    .project-overview-item p {
+      color: constants.$dull-white;
+    }
   }
 
 
