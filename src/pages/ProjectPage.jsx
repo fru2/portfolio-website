@@ -60,9 +60,6 @@ export default function ProjectPage(props) {
         <div>
           <img src="" alt="" />
         </div>
-        <div>
-          <img src="" alt="" />
-        </div>
       </article>
 
 
