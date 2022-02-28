@@ -1,0 +1,31 @@
+.nav-containerr {
+  box-sizing: content-box;
+  width: relative;
+  width: 100vw;
+}
+
+.side-nav {
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #13161c;
+  width: 20vw;
+  height: 100vh;
+  padding: 60px;
+  margin: 0 !important;
+  font-size: 1.2rem !important;
+  line-height: 1.3 !important;
+  overflow-y: auto;
+
+  li+li {
+    margin-top: 16px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .nav-containerr {
+    display: none;
+  }
+}

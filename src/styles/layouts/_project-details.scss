@@ -1,9 +1,12 @@
 @use "../constants";
 @use "../mixins";
 
+
 .project-details {
   overflow-x: hidden;
   box-sizing: border-box;
+  width: 80vw;
+  margin-left: 20vw;
 
   .hero-image {
     @include mixins.flex(column);
@@ -100,10 +103,13 @@
 
 }
 
+
+
 @media screen and (max-width: 768px) {
 
   .project-details {
-
+    width: 100vw;
+    margin-left: 0vw;
 
     .about-project {
 
