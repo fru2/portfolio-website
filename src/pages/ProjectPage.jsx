@@ -72,7 +72,6 @@ export default function ProjectPage(props) {
           <img src="" alt="" />
           <img src="" alt="" />
         </div>
-
       </article>
 
 
@@ -81,7 +80,9 @@ export default function ProjectPage(props) {
         <h1 className='heading-txt'>Ideation session</h1>
         <p className='body-txt'>Discussing and researching about the plan(s) to achieve the project goals.</p>
 
-        <img src="" alt="" />
+        <div className="image-container">
+          <img src="" alt="" />
+        </div>
 
       </article>
 

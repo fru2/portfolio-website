@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../../assets/Branding.svg'
+import Logo from '../../assets/icons/Branding.svg'
 
 export default function NavBar(props) {
 

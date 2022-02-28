@@ -11,17 +11,20 @@
     width: 100vw;
 
     img {
-      width: 100%;
+      width: 100vw;
       height: 100vh;
       z-index: -99;
       position: fixed;
       object-fit: cover;
+      top: 0;
     }
   }
 
   .bg-black-gradient {
     background: linear-gradient(to bottom,
         #0D0F1300,
+        #0d0f13c0 15%,
+        #0d0f13ee 20%,
         #0D0F13 25%);
     padding-top: 80px;
   }
@@ -33,6 +36,7 @@
 
   .about-project {
 
+    margin-top: -40vh;
 
     .project-overview {
       @include mixins.flex(row);
@@ -73,14 +77,48 @@
     }
   }
 
+  .problem-statement {
+    .image-comparison {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      margin-top: 80px;
+      background-color: constants.$grey;
+    }
+  }
+
+
+  .ideation {
+    .image-container {
+      margin: 0 -80px;
+      margin-top: 80px;
+      aspect-ratio: 16 / 9;
+      width: calc(100% + 160px);
+      background-color: constants.$grey;
+    }
+  }
+
 
 }
 
-// @media screen and (max-width: 768px) {
-//   .project-details {
-//     .hero-image {
-//       margin-top: -32px;
-//       margin-left: -32px;
-//     }
-//   }
-// }
+@media screen and (max-width: 768px) {
+
+  .project-details {
+
+
+    .about-project {
+
+      .project-overview {
+        margin-top: 24px;
+        max-width: 100%;
+      }
+
+      .project-overview-item {
+        margin: 16px;
+        margin-left: 0;
+        margin-right: 24px;
+      }
+
+    }
+
+  }
+}

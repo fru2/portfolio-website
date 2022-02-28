@@ -39,7 +39,8 @@ code {
     padding: 32px;
   }
 
+  // Select all the siblings of container.
   .container+.container {
-    margin-top: 4rem;
+    padding-top: 4.5rem;
   }
 }
