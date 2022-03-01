@@ -21,7 +21,7 @@ export default function ProjectPage(props) {
 
 
 
-        <article className='about-project bg-black-gradient container'>
+        <article className='about-project bg-black-gradient container' id='about-project'>
           <h1 className='heading-txt'>Project title here</h1>
           <p className='body-txt'>Project short description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
 
@@ -66,7 +66,7 @@ export default function ProjectPage(props) {
 
 
 
-        <article className="problem-statement container">
+        <article className="problem-statement container" id="problem-statement">
           <h1 className='heading-txt'>Problem statement</h1>
           <p className='body-txt'>The brand name XYZ that works as a shopping firm has an old interface which is confusing and requires a lot of click action to perform in order to get the job done.</p>
 
@@ -78,7 +78,7 @@ export default function ProjectPage(props) {
 
 
 
-        <article className="ideation container">
+        <article className="ideation container" id="ideation">
           <h1 className='heading-txt'>Ideation session</h1>
           <p className='body-txt'>Discussing and researching about the plan(s) to achieve the project goals.</p>
 
@@ -86,6 +86,55 @@ export default function ProjectPage(props) {
             <img src="" alt="" />
           </div>
 
+        </article>
+
+
+
+        <article className="competitor container" id="competitor">
+          <h1 className='heading-txt'>competitor research</h1>
+          <p className='body-txt'>Discussing and researching about the plan(s) to achieve the project goals.</p>
+        </article>
+
+
+
+        <article className="content-map container" id="content-map">
+          <h1 className='heading-txt'>Content map</h1>
+          <p className='body-txt'>Discussing and researching about the plan(s) to achieve the project goals.</p>
+        </article>
+
+
+
+        <article className="wireframe container" id="wireframe">
+          <h1 className='heading-txt'>Wireframing</h1>
+          <p className='body-txt'>Discussing and researching about the plan(s) to achieve the project goals.</p>
+        </article>
+
+
+
+        <article className="ui-design container" id="ui-design">
+          <h1 className='heading-txt'>UI Design</h1>
+          <p className='body-txt'>Discussing and researching about the plan(s) to achieve the project goals.</p>
+        </article>
+
+
+
+        <article className="developed-app container" id="developed-app">
+          <h1 className='heading-txt'>Developed application</h1>
+          <p className='body-txt'>Discussing and researching about the plan(s) to achieve the project goals.</p>
+        </article>
+
+
+
+        <article className="user-testing container" id="user-testing">
+          <h1 className='heading-txt'>User testing</h1>
+          <p className='body-txt'>Discussing and researching about the plan(s) to achieve the project goals.</p>
+        </article>
+
+
+
+        <article className="deployment container" id="deployment">
+          <h1 className='heading-txt'>Deployment</h1>
+          <p className='body-txt'>Discussing and researching about the plan(s) to achieve the project goals.</p>
         </article>
 
       </section>

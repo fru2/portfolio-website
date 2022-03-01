@@ -4,10 +4,10 @@ export default function NavBarExpanded(props) {
   return (
     <nav className='navbar-exp'>
       <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Project</a></li>
-        <li><a href="#">Workflow</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#what-section">About</a></li>
+        <li><a href="#work-section">Project</a></li>
+        <li><a href="#how-section">Workflow</a></li>
+        <li><a href="#contact-section">Contact</a></li>
       </ul>
 
       <button className='icon-btn' onClick={props.onclick}></button>

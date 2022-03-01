@@ -43,7 +43,7 @@ export default function HomePage() {
 
       </header>
 
-      <section className='what-section container'>
+      <section className='what-section container' id="what-section">
         <h1 className='heading-txt'>I Design and Create Websites</h1>
         {/* <h1 className='heading-txt'></h1> */} {/* DO NOT UNCOMMENT */}
         <p className='body-txt'>I love creating, whether it's writing code for a website or making an art piece. Click a category below to view projects related to that.</p>
@@ -59,7 +59,7 @@ export default function HomePage() {
       {/* TODO: Contents beyond this point will change as per the selected toggle button */}
 
       {/* TODO: remove this section statically typed content.*/}
-      <section className='work-section container'>
+      <section className='work-section container' id="work-section">
         <h1 className='heading-txt'>Projects</h1>
         <ProjectElements id="1" imgSrc={placeholder} title="Project title" desc="Short description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed " />
         <ProjectElements id="2" imgSrc={placeholder} title="Project title" desc="Short description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed " />
@@ -67,13 +67,13 @@ export default function HomePage() {
       </section>
 
 
-      <section className='how-section container'>
+      <section className='how-section container' id="how-section">
         <h1 className='heading-txt'>From paper to product</h1>
         <p className='body-txt'>it takes a lot</p>
         <WorkFlow />
       </section>
 
-      <section className='contact-section container'>
+      <section className='contact-section container' id="contact-section">
         <h1 className='heading-txt'>Let's conntect</h1>
         <p className='body-txt'>If you have reached this far, then wouldn't it be great if we can have a chat. Or maybe we can work together to build something ;)</p>
         <ButtonOutline text="Email" />
