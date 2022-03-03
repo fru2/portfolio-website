@@ -1,7 +1,12 @@
 import React from 'react'
 import PlaceholderImg from '../assets/images/placeholder.png'
-import NavBar from '../components/common/NavBar'
+// import NavBar from '../components/common/NavBar'
 import SideNav from '../components/common/SideNav'
+
+
+
+// TODO: Increase the width of heading-txt
+// TODO: Increase the width of project-overview
 
 export default function ProjectPage(props) {
   return (
@@ -70,7 +75,7 @@ export default function ProjectPage(props) {
           <h1 className='heading-txt'>Problem statement</h1>
           <p className='body-txt'>The brand name XYZ that works as a shopping firm has an old interface which is confusing and requires a lot of click action to perform in order to get the job done.</p>
 
-          <div className="image-comparison">
+          <div className="image image-comparison">
             <img src="" alt="" />
             <img src="" alt="" />
           </div>
@@ -100,6 +105,12 @@ export default function ProjectPage(props) {
         <article className="content-map container" id="content-map">
           <h1 className='heading-txt'>Content map</h1>
           <p className='body-txt'>Discussing and researching about the plan(s) to achieve the project goals.</p>
+
+          <div className="image">
+            <img src="" alt="" />
+            <img src="" alt="" />
+          </div>
+
         </article>
 
 

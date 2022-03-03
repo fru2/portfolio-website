@@ -8,6 +8,12 @@
   width: 80vw;
   margin-left: 20vw;
 
+  .image {
+    width: 100%;
+    margin-top: 80px;
+    background-color: constants.$grey;
+  }
+
   .hero-image {
     @include mixins.flex(column);
     height: 100vh;
@@ -82,10 +88,7 @@
 
   .problem-statement {
     .image-comparison {
-      width: 100%;
       aspect-ratio: 16 / 9;
-      margin-top: 80px;
-      background-color: constants.$grey;
     }
   }
 
