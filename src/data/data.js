@@ -3,33 +3,51 @@ let dataObject = [
   {
     pth: "sample1",
     id: 1,
-    title: "Lorem ipsum dummy text",
+    title: "Lorem ipsum",
     desc: "Short description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed",
 
 
 
     overview: {
-      role: "Front-end",
+      role: [
+        "Front-end (react)", "UI design"
+      ],
+      tools: [
+        "React", "Adobe XD"
+      ],
       type: "Personal (case study)",
-      duration: "2 Jan - 28 Jan",
-      technologies: "React, Adobe XD"
+      duration: "2 Jan - 22 Jan 2022",
     },
 
-    promoImg: {
-      img1: "",
-      img2: "",
-      img3: "",
-      img4: "",
-      img5: ""
-    },
+    promoImg: [{
+        url: "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg",
+        alt: ""
+      },
+      {
+        url: "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg",
+        alt: ""
+      },
+      {
+        url: "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg",
+        alt: ""
+      },
+      {
+        url: "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg",
+        alt: ""
+      },
+      {
+        url: "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg",
+        alt: ""
+      },
+    ],
 
 
 
-    problemStatement: "The brand name XYZ that works as a shopping firm has an old interface which is confusing and requires a lot of click action to perform in order to get the job done.",
+    problemStatement: "The brand name XYZZ that works as a shopping firm has an old interface which is confusing and requires a lot of click action to perform in order to get the job done.",
 
     compareImg: {
-      oldimg: "",
-      newImg: ""
+      oldImg: "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg",
+      newImg: "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg"
     },
 
 
@@ -53,19 +71,37 @@ let dataObject = [
 
 
     overview: {
-      role: "Front-end",
+      role: [
+        "Front-end (react)", "UI design"
+      ],
+      tools: [
+        "React", "Adobe XD"
+      ],
       type: "Personal (case study)",
       duration: "2 Jan - 28 Jan",
-      technologies: "React, Adobe XD"
     },
 
-    promoImg: {
-      img1: "",
-      img2: "",
-      img3: "",
-      img4: "",
-      img5: ""
-    },
+    promoImg: [{
+        url: "",
+        alt: ""
+      },
+      {
+        url: "",
+        alt: ""
+      },
+      {
+        url: "",
+        alt: ""
+      },
+      {
+        url: "",
+        alt: ""
+      },
+      {
+        url: "",
+        alt: ""
+      },
+    ],
 
 
 
@@ -94,19 +130,37 @@ let dataObject = [
 
 
     overview: {
-      role: "Front-end",
+      role: [
+        "Front-end (react)", "UI design"
+      ],
+      tools: [
+        "React", "Adobe XD"
+      ],
       type: "Personal (case study)",
       duration: "2 Jan - 28 Jan",
-      technologies: "React, Adobe XD"
     },
 
-    promoImg: {
-      img1: "",
-      img2: "",
-      img3: "",
-      img4: "",
-      img5: ""
-    },
+    promoImg: [{
+        url: "",
+        alt: ""
+      },
+      {
+        url: "",
+        alt: ""
+      },
+      {
+        url: "",
+        alt: ""
+      },
+      {
+        url: "",
+        alt: ""
+      },
+      {
+        url: "",
+        alt: ""
+      },
+    ],
 
 
 

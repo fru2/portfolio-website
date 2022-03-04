@@ -16,7 +16,7 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<App />} />
       {data.map(project => (
-        <Route path={`projects/${project.pth}`} element={<ProjectPage />} />
+        <Route key={project.id} path={`projects/${project.pth}`} element={<ProjectPage data={project} />} />
       ))}
     </Routes>
   </BrowserRouter >,

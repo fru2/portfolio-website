@@ -12,6 +12,8 @@ import SideNav from '../components/SideNav'
 
 export default function ProjectPage(props) {
 
+  let { data } = props;
+
 
   return (
     <>
@@ -33,55 +35,52 @@ export default function ProjectPage(props) {
 
 
         <article className='about-project bg-black-gradient container' id='about-project'>
-          <h1 className='heading-txt'>Project title here</h1>
-          <p className='body-txt'>Project short description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
+          <h1 className='heading-txt'>{data.title}</h1>
+          <p className='body-txt'>{data.desc}</p>
 
           <div className="project-overview">
             <div className="project-overview-item">
               <p>Role</p>
-              <h3>Front-end (react)</h3>
-              <h3>UI Design</h3>
+              {data.overview.role.map((role, index) => (
+                <h3 key={index}>{role}</h3>
+              ))}
+            </div>
+            <div className="project-overview-item">
+              <p>Tools</p>
+              {data.overview.tools.map((item, index) => (
+                <h3 key={index}>{item}</h3>
+              ))}
+
             </div>
             <div className="project-overview-item">
               <p>Type</p>
-              <h3>Personal (case study)</h3>
+              <h3>{data.overview.type}</h3>
             </div>
             <div className="project-overview-item">
               <p>Duration</p>
-              <h3>2 Jan - 28 Jan</h3>
+              <h3>{data.overview.duration}</h3>
             </div>
 
           </div>
 
 
           <article className="renders-grid">
-            <div>
-              <img src="" alt="" />
-            </div>
-            <div>
-              <img src="" alt="" />
-            </div>
-            <div>
-              <img src="" alt="" />
-            </div>
-            <div>
-              <img src="" alt="" />
-            </div>
-            <div>
-              <img src="" alt="" />
-            </div>
+            {data.promoImg.map((item, index) => (
+              <img key={index} src={item.url} alt={item.alt} />
+            ))}
           </article>
+
 
         </article>
 
 
         <article className="problem-statement container" id="problem-statement">
           <h1 className='heading-txt'>Problem statement</h1>
-          <p className='body-txt'>The brand name XYZ that works as a shopping firm has an old interface which is confusing and requires a lot of click action to perform in order to get the job done.</p>
+          <p className='body-txt'>{data.problemStatement}</p>
 
           <div className="image image-comparison">
-            <img src="" alt="" />
-            <img src="" alt="" />
+            <img src={data.compareImg.oldImg} alt="" />
+            <img src={data.compareImg.newImg} alt="" />
           </div>
         </article>
 
