@@ -121,6 +121,11 @@
     width: 100vw;
     margin-left: 0vw;
 
+    .heading-txt,
+    .body-txt {
+      max-width: 100%;
+    }
+
     .about-project {
 
       .project-overview {
