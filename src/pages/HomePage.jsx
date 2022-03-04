@@ -1,9 +1,9 @@
-import NavBar from '../components/common/NavBar';
-import ButtonToggle from '../components/common/ButtonToggle';
-import ProjectElements from "../components/homePage/ProjectsElement";
-import WorkFlow from "../components/homePage/WorkFlow";
-import ButtonOutline from '../components/common/ButtonOutline';
-import NavExtended from "../components/common/NavBarExpanded";
+import NavBar from '../components/NavBar';
+import ButtonToggle from '../components/ButtonToggle';
+import ProjectElements from "../components/ProjectsElement";
+import WorkFlow from "../components/WorkFlow";
+import ButtonOutline from '../components/ButtonOutline';
+import NavExtended from "../components/NavBarExpanded";
 
 import placeholder from "../assets/images/placeholder.png";
 
@@ -65,21 +65,14 @@ export default function HomePage() {
 
       {/* TODO: Contents beyond this point will change as per the selected toggle button */}
 
-      {/* TODO: remove this section statically typed content.*/}
-      {/* <section className='work-section container' id="work-section">
-        <h1 className='heading-txt'>Projects</h1>
-        <ProjectElements id="1" imgSrc={placeholder} title="Project title" desc="Short description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed " />
-        <ProjectElements id="2" imgSrc={placeholder} title="Project title" desc="Short description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed " />
-        <ProjectElements id="3" imgSrc={placeholder} title="Project title" desc="Short description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed " />
-      </section> */}
-
       <section className='work-section container' id="work-section">
         <h1 className='heading-txt'>Projects</h1>
         {data.map((project) => (
-          <Link to={`/${project.pth}`} key={project.id}>
+          <Link to={`/projects/${project.pth}`} key={project.id}>
             <ProjectElements key={project.id} id={project.id} imgSrc={placeholder} title={project.title} desc={project.desc}></ProjectElements>
           </Link>
         ))}
+
       </section>
       <Outlet />
 

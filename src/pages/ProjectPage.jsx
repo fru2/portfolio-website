@@ -1,26 +1,22 @@
 import React from 'react'
 import PlaceholderImg from '../assets/images/placeholder.png'
-// import NavBar from '../components/common/NavBar'
-import SideNav from '../components/common/SideNav'
-
-// import { useEffect } from "react";
-// import { useLocation } from "react-router-dom";
+import ScrollToTop from '../components/ScrollToTop'
+// import NavBar from '../components/NavBar'
+import SideNav from '../components/SideNav'
 
 
 
 // TODO: Increase the width of heading-txt
 // TODO: Increase the width of project-overview
 
+
 export default function ProjectPage(props) {
 
 
-  // const { pathname } = useLocation();
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, [pathname]);
-
   return (
     <>
+
+      <ScrollToTop />
 
       <SideNav></SideNav> {/*FIXME: fixed with index z-index 1*/}
 
@@ -57,28 +53,26 @@ export default function ProjectPage(props) {
 
           </div>
 
+
+          <article className="renders-grid">
+            <div>
+              <img src="" alt="" />
+            </div>
+            <div>
+              <img src="" alt="" />
+            </div>
+            <div>
+              <img src="" alt="" />
+            </div>
+            <div>
+              <img src="" alt="" />
+            </div>
+            <div>
+              <img src="" alt="" />
+            </div>
+          </article>
+
         </article>
-
-
-
-        <article className="renders-grid container">
-          <div>
-            <img src="" alt="" />
-          </div>
-          <div>
-            <img src="" alt="" />
-          </div>
-          <div>
-            <img src="" alt="" />
-          </div>
-          <div>
-            <img src="" alt="" />
-          </div>
-          <div>
-            <img src="" alt="" />
-          </div>
-        </article>
-
 
 
         <article className="problem-statement container" id="problem-statement">
@@ -106,7 +100,7 @@ export default function ProjectPage(props) {
 
 
         <article className="competitor container" id="competitor">
-          <h1 className='heading-txt'>competitor research</h1>
+          <h1 className='heading-txt'>Competitor research</h1>
           <p className='body-txt'>Discussing and researching about the plan(s) to achieve the project goals.</p>
         </article>
 

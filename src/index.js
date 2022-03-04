@@ -16,10 +16,10 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<App />} />
       {data.map(project => (
-        <Route path={project.pth} element={<ProjectPage />} />
+        <Route path={`projects/${project.pth}`} element={<ProjectPage />} />
       ))}
     </Routes>
-  </BrowserRouter>,
+  </BrowserRouter >,
   document.getElementById('root')
 );
 
