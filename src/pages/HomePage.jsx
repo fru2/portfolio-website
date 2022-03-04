@@ -10,6 +10,10 @@ import placeholder from "../assets/images/placeholder.png";
 import BehanceLogo from '../assets/icons/behance.svg';
 import CodepenLogo from '../assets/icons/codepen.svg';
 
+import { Link, Outlet } from 'react-router-dom';
+
+import { getProjectData } from '../data/data';
+
 export default function HomePage() {
 
   const expandNavbar = () => {
@@ -21,6 +25,9 @@ export default function HomePage() {
   }
 
   // FIXME: Make the image responsive and add media query for tablet sized devices.
+
+
+  let data = getProjectData();
 
   return (
     <main>
@@ -59,12 +66,22 @@ export default function HomePage() {
       {/* TODO: Contents beyond this point will change as per the selected toggle button */}
 
       {/* TODO: remove this section statically typed content.*/}
-      <section className='work-section container' id="work-section">
+      {/* <section className='work-section container' id="work-section">
         <h1 className='heading-txt'>Projects</h1>
         <ProjectElements id="1" imgSrc={placeholder} title="Project title" desc="Short description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed " />
         <ProjectElements id="2" imgSrc={placeholder} title="Project title" desc="Short description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed " />
         <ProjectElements id="3" imgSrc={placeholder} title="Project title" desc="Short description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed " />
+      </section> */}
+
+      <section className='work-section container' id="work-section">
+        <h1 className='heading-txt'>Projects</h1>
+        {data.map((project) => (
+          <Link to={`/${project.pth}`} key={project.id}>
+            <ProjectElements key={project.id} id={project.id} imgSrc={placeholder} title={project.title} desc={project.desc}></ProjectElements>
+          </Link>
+        ))}
       </section>
+      <Outlet />
 
 
       <section className='how-section container' id="how-section">
@@ -74,7 +91,7 @@ export default function HomePage() {
       </section>
 
       <section className='contact-section container' id="contact-section">
-        <h1 className='heading-txt'>Let's conntect</h1>
+        <h1 className='heading-txt'>Let's connect</h1>
         <p className='body-txt'>If you have reached this far, then wouldn't it be great if we can have a chat. Or maybe we can work together to build something ;)</p>
         <ButtonOutline text="Email" />
       </section>

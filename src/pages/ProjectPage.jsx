@@ -3,12 +3,22 @@ import PlaceholderImg from '../assets/images/placeholder.png'
 // import NavBar from '../components/common/NavBar'
 import SideNav from '../components/common/SideNav'
 
+// import { useEffect } from "react";
+// import { useLocation } from "react-router-dom";
+
 
 
 // TODO: Increase the width of heading-txt
 // TODO: Increase the width of project-overview
 
 export default function ProjectPage(props) {
+
+
+  // const { pathname } = useLocation();
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [pathname]);
+
   return (
     <>
 

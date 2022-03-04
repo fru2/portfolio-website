@@ -3,11 +3,22 @@ import ReactDOM from 'react-dom';
 import './styles/main.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ProjectPage from './pages/ProjectPage';
+
+import { getProjectData } from "./data/data";
+
+let data = getProjectData();
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    {/* <App /> */}
+    <Routes>
+      <Route path="/" element={<App />} />
+      {data.map(project => (
+        <Route path={project.pth} element={<ProjectPage />} />
+      ))}
+    </Routes>
   </BrowserRouter>,
   document.getElementById('root')
 );
