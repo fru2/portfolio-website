@@ -2,21 +2,26 @@
 
 // TODO: Explicity declare the width and hight of image.
 
+.work-section a {
+
+  &:nth-child(odd) {
+    .element-container {
+      flex-direction: row-reverse;
+
+
+      >div:last-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
 .element-container {
 
   margin-left: 4rem;
   margin-top: 12rem;
   display: flex;
   flex-direction: row;
-
-  &:nth-child(odd) {
-    flex-direction: row-reverse;
-
-    >div:last-child {
-      margin-left: 0;
-    }
-
-  }
 
 
   >div:first-child {
@@ -57,6 +62,23 @@
 }
 
 @media screen and (max-width: 768px) {
+
+  .work-section a {
+
+    &:nth-child(odd) {
+      .element-container {
+        flex-direction: column;
+
+
+        >div:last-child {
+          margin-top: 0;
+          margin-left: 0;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+
   .element-container {
     margin-left: 0;
     margin-top: 6rem;
@@ -64,7 +86,6 @@
 
     &:nth-child(odd) {
       flex-direction: column;
-
     }
 
     >div:first-child {
