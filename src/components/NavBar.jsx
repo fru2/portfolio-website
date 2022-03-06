@@ -5,7 +5,16 @@ export default function NavBar(props) {
 
     return (
         <nav className='main-nav'>
-            <button className='icon-btn' onClick={props.onclick}>
+            {props.isMain === true ? <NavBarMain onclick={props.onclick} /> : <NavBarWithBack onclick={props.onclick} />}
+        </nav>
+    );
+}
+
+
+function NavBarMain(props) {
+    return (
+        <>
+            <button className='icon-btn icon-menu' onClick={props.onclick}>
             </button>
 
             <img src={Logo} className='branding' alt='branding logo' />
@@ -13,6 +22,19 @@ export default function NavBar(props) {
             <a href='#' className='btn-txt'>
                 GITHUB
             </a>
-        </nav>
+        </>
+    );
+}
+
+function NavBarWithBack(props) {
+    return (
+        <>
+            <button className='icon-btn icon-back' onClick={props.onclick}>
+            </button>
+
+            <a href='#' className='btn-txt'>
+                GITHUB
+            </a>
+        </>
     );
 }

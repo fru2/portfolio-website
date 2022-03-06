@@ -18,6 +18,7 @@ export default function HomePage() {
 
   const expandNavbar = () => {
     document.querySelector('.navbar-exp').style.display = 'flex';
+    console.log('expand');
   }
 
   const closeNavbar = () => {
@@ -32,7 +33,7 @@ export default function HomePage() {
   return (
     <main>
       <NavExtended onclick={closeNavbar} />
-      <NavBar onclick={expandNavbar} />
+      <NavBar isMain={true} onclick={expandNavbar} />
 
 
       <header>

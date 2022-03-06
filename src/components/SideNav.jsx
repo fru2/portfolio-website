@@ -7,7 +7,6 @@ export default function SideNav(props) {
     <nav className='nav-containerr'>
       <ul className='side-nav body-txt'>
 
-
         <li><Link to="about-project" spy={true} smooth={true} duration={500} className='nav-links' activeClass='nav-is-active'>Project details</Link></li>
 
 
