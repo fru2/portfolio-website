@@ -28,6 +28,11 @@
     background: url("../../assets/icons/back.svg");
   }
 
+  .outline-btn {
+    min-width: auto !important;
+    padding: 0.5rem 1rem;
+  }
+
 
   img {
 
@@ -50,8 +55,7 @@
 
 @media screen and (max-width: 768px) {
   .main-nav {
-    background: #ffffff0a;
-    backdrop-filter: blur(20px);
+    background: #0D0F13cc;
 
     button {
       height: 2rem;

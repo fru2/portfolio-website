@@ -32,8 +32,8 @@ function NavBarWithBack(props) {
             <button className='icon-btn icon-back' onClick={props.onclick}>
             </button>
 
-            <a href='#' className='btn-txt'>
-                GITHUB
+            <a href='#' className='btn-txt outline-btn'>
+                Website
             </a>
         </>
     );
