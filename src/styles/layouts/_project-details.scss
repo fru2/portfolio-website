@@ -22,10 +22,10 @@
   .hero-image {
     @include mixins.flex(column);
     height: 100vh;
-    width: 100vw;
+    width: 80vw;
 
     img {
-      width: 100vw;
+      width: 100%;
       height: 100vh;
       z-index: -99;
       position: fixed;
@@ -129,6 +129,11 @@
   .project-details {
     width: 100vw;
     margin-left: 0vw;
+
+
+    .hero-image {
+      width: 100vw;
+    }
 
     .heading-txt,
     .body-txt {

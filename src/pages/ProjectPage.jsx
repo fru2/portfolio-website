@@ -1,18 +1,20 @@
 import React from 'react'
 import PlaceholderImg from '../assets/images/placeholder.png'
 import ScrollToTop from '../components/ScrollToTop'
-// import NavBar from '../components/NavBar'
+import NavBar from '../components/NavBar'
 import SideNav from '../components/SideNav'
+import { useNavigate } from 'react-router-dom'
 
-
-
-// TODO: Increase the width of heading-txt
-// TODO: Increase the width of project-overview
 
 
 export default function ProjectPage(props) {
 
   let { data } = props;
+
+  const navigate = useNavigate();
+  const backBtn = () => {
+    navigate("/");
+  }
 
 
   return (
@@ -20,16 +22,15 @@ export default function ProjectPage(props) {
 
       <ScrollToTop />
 
-      <SideNav></SideNav> {/*FIXME: fixed with index z-index 1*/}
+      <SideNav></SideNav>
+
+      <NavBar isMain={false} onclick={backBtn}></NavBar>
 
 
       <section className='project-details'>
 
-        {/* FIXME: fixed with z-index 2 */}
-
-
-        <div className="hero-image flex-center"> {/* FIXME: fixed with z-index 3 */}
-          <img src={PlaceholderImg} alt="Brand identity" />
+        <div className="hero-image flex-center">
+          <img src={data.img} alt="Brand identity" />
         </div>
 
 

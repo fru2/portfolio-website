@@ -10,13 +10,22 @@
 
   button {
     margin: 1rem 2rem;
-
-    background: url("../../assets/icons/menu.svg");
-    background-size: cover;
-    height: 2rem;
-    width: 2rem;
+    // background: url("../../assets/icons/menu.svg");
+    background-size: cover !important;
+    height: 1.8rem;
+    width: 1.8rem;
     border: none;
     cursor: pointer;
+    background-repeat: no-repeat;
+
+  }
+
+  .icon-menu {
+    background: url("../../assets/icons/menu.svg");
+  }
+
+  .icon-back {
+    background: url("../../assets/icons/back.svg");
   }
 
 
@@ -36,4 +45,17 @@
     justify-self: flex-end;
   }
 
+}
+
+
+@media screen and (max-width: 768px) {
+  .main-nav {
+    background: #ffffff0a;
+    backdrop-filter: blur(20px);
+
+    button {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
 }
