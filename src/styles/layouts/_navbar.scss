@@ -1,12 +1,12 @@
 @use '../mixins';
 @use '../constants';
 
-// TODO: FIX WIDTH, it's overflowing
 .main-nav {
   @include mixins.flex(row);
   position: fixed;
   width: 100%;
   justify-content: space-between;
+  z-index: 100;
 
   button {
     margin: 1rem 2rem;
