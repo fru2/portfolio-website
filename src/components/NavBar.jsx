@@ -20,7 +20,7 @@ function NavBarMain(props) {
             <img src={Logo} className='branding' alt='branding logo' />
 
             <a href='#' className='btn-txt'>
-                GITHUB
+                RÉSUMÉ
             </a>
         </>
     );

@@ -10,9 +10,33 @@
   background: none;
   border: 1px constants.$white solid;
   border-radius: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  transition: 150ms ease-in-out;
 }
 
-.btn-active {
+
+.outline-btn:hover {
   background: constants.$white;
   color: constants.$black;
+  // padding: 0.45rem;
+}
+
+
+.btn-active {
+  // min-width: 10rem;
+  background: constants.$white;
+  color: constants.$black;
+  padding: 0.5rem 3rem;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 16px;
+  font-size: 1.0rem;
+  text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 768px) {
+  .outline-btn {
+    cursor: default;
+  }
 }

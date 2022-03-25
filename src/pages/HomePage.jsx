@@ -4,8 +4,10 @@ import ProjectElements from "../components/ProjectsElement";
 import WorkFlow from "../components/WorkFlow";
 import ButtonOutline from '../components/ButtonOutline';
 import NavExtended from "../components/NavBarExpanded";
+import ParallaxGallery from '../components/ParallaxGallery';
 
 import placeholder from "../assets/images/placeholder.png";
+
 
 import BehanceLogo from '../assets/icons/behance.svg';
 import CodepenLogo from '../assets/icons/codepen.svg';
@@ -37,16 +39,23 @@ export default function HomePage() {
 
 
       <header>
-        <div className="hero-image"></div>
+        {/* <div className="hero-image">
+          <img src={placeholder} alt="placeholder" />
+        </div> */}
 
         <div className="hero-txt">
           <h3>Hi</h3>
           <h1>I'm Utsav</h1>
         </div>
 
+
+        <div className="outline-btn resume-btn">
+          Contact
+        </div>
+
         <div className="social-links">
-          <a href="https://codepen.com/" target="_blank" rel="noopener noreferrer"><img src={CodepenLogo} alt="Codepen nav link" /></a>
-          <a href="https://behance.net/" target="_blank" rel="noopener noreferrer"><img src={BehanceLogo} alt="Behance nav link" /></a>
+          <a href="https://codepen.io/fru2" target="_blank" rel="noopener noreferrer"><img src={CodepenLogo} alt="Codepen nav link" /></a>
+          <a href="https://www.behance.net/fru2" target="_blank" rel="noopener noreferrer"><img src={BehanceLogo} alt="Behance nav link" /></a>
         </div>
 
       </header>
@@ -59,7 +68,8 @@ export default function HomePage() {
           <ButtonToggle text="Front-end" />
           <ButtonToggle text="UX-UI" />
         </div>
-        {/* <ParallaxGallery img1={} img2={} img3={}/> */}{/* DO NOT UNCOMMENT */}
+
+        <ParallaxGallery img0={placeholder} img1={placeholder} img2={placeholder} />
       </section>
 
 
@@ -86,7 +96,7 @@ export default function HomePage() {
       <section className='contact-section container' id="contact-section">
         <h1 className='heading-txt'>Let's connect</h1>
         <p className='body-txt'>If you have reached this far, then wouldn't it be great if we can have a chat. Or maybe we can work together to build something ;)</p>
-        <ButtonOutline text="Email" />
+        <ButtonOutline text="Contact" />
       </section>
 
     </main>

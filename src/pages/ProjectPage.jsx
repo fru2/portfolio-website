@@ -13,7 +13,7 @@ export default function ProjectPage(props) {
 
   const navigate = useNavigate();
   const backBtn = () => {
-    navigate("/");
+    navigate(-1);
   }
 
 

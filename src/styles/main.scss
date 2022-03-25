@@ -37,6 +37,11 @@ code {
 }
 
 
+img {
+  pointer-events: none !important;
+}
+
+
 .App {
   overflow-x: hidden;
 }
@@ -55,5 +60,9 @@ code {
   // Select all the siblings of container.
   .container+.container {
     padding-top: 4.5rem;
+  }
+
+  * {
+    cursor: default !important;
   }
 }
