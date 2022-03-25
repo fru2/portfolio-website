@@ -1,12 +1,12 @@
 @use '../mixins';
 @use '../constants';
 
-// TODO: FIX WIDTH, it's overflowing
 .main-nav {
   @include mixins.flex(row);
   position: fixed;
   width: 100%;
   justify-content: space-between;
+  z-index: 100;
 
   button {
     margin: 1rem 2rem;
@@ -26,6 +26,11 @@
 
   .icon-back {
     background: url("../../assets/icons/back.svg");
+  }
+
+  .outline-btn {
+    min-width: auto !important;
+    padding: 0.5rem 1rem;
   }
 
 
@@ -50,8 +55,7 @@
 
 @media screen and (max-width: 768px) {
   .main-nav {
-    background: #ffffff0a;
-    backdrop-filter: blur(20px);
+    background: #0D0F13cc;
 
     button {
       height: 2rem;

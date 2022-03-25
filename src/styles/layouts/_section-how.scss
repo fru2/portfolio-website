@@ -7,6 +7,14 @@
     display: inline-block;
     margin: 0 2.5rem;
   }
+
+  img {
+    width: 100%;
+    padding: 80px;
+    opacity: 0.8;
+    box-sizing: border-box;
+  }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -15,6 +23,11 @@
       margin: 0px {
         top: 16px;
       }
+    }
+
+    img {
+      padding: 0;
+      padding-top: 4.5rem;
     }
   }
 }
