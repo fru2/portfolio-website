@@ -2,7 +2,7 @@
 @use "../constants";
 
 header {
-  height: 100vh !important;
+  height: 100vh;
   width: 100%;
   // background: constants.$primary-gradient;
   @include mixins.flex(column);
@@ -12,6 +12,7 @@ header {
     font-weight: 200;
     color: constants.$dull-white;
     text-align: center;
+    opacity: 0;
     // mix-blend-mode: difference;
   }
 
@@ -19,6 +20,9 @@ header {
   h1 {
     @include mixins.font-size(54);
     margin-top: -1.6rem;
+    opacity: 0;
+
+
     // mix-blend-mode: difference;
   }
 
@@ -62,9 +66,9 @@ header {
     object-fit: cover;
   }
 
-  // .resume-btn {
-  //   margin-top: 2rem;
-  // }
+  .resume-btn {
+    opacity: 0;
+  }
 
 }
 
@@ -79,6 +83,7 @@ header {
     padding: 32px;
     box-sizing: border-box;
     text-align: center;
+    height: 100vh !important;
     // align-items: center;
 
 
@@ -88,8 +93,10 @@ header {
     }
 
     .hero-txt {
-      margin-top: -5.5rem;
+      margin-top: -5rem;
     }
+
+    // .
 
     .hero-image {
       height: 40vh;

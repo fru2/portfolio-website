@@ -6,17 +6,28 @@ import ButtonOutline from '../components/ButtonOutline';
 import NavExtended from "../components/NavBarExpanded";
 import ParallaxGallery from '../components/ParallaxGallery';
 
+
+// media files
 import placeholder from "../assets/images/placeholder.png";
-
-
 import BehanceLogo from '../assets/icons/behance.svg';
 import CodepenLogo from '../assets/icons/codepen.svg';
 
+//plugins
 import { Link, Outlet } from 'react-router-dom';
+import { gsap, ScrollTrigger } from 'gsap/all';
+// import ScrollTrigger from 'gsap/ScrollTrigger';
 
+import { useEffect } from 'react';
+
+//data
 import { getProjectData } from '../data/data';
 
+
+
+
 export default function HomePage() {
+
+  gsap.registerPlugin(ScrollTrigger);
 
   const expandNavbar = () => {
     document.querySelector('.navbar-exp').style.display = 'flex';
@@ -29,8 +40,12 @@ export default function HomePage() {
 
   // FIXME: Make the image responsive and add media query for tablet sized devices.
 
-
   let data = getProjectData();
+
+
+  useEffect(() => {
+    gsapAnimation();
+  }, []); // empty array means 'run once'
 
   return (
     <main>
@@ -47,12 +62,9 @@ export default function HomePage() {
           <h3>Hi</h3>
           <h1>I'm Utsav</h1>
         </div>
-
-
         <div className="outline-btn resume-btn">
           Contact
         </div>
-
         <div className="social-links">
           <a href="https://codepen.io/fru2" target="_blank" rel="noopener noreferrer"><img src={CodepenLogo} alt="Codepen nav link" /></a>
           <a href="https://www.behance.net/fru2" target="_blank" rel="noopener noreferrer"><img src={BehanceLogo} alt="Behance nav link" /></a>
@@ -101,4 +113,54 @@ export default function HomePage() {
 
     </main>
   );
+}
+
+
+function gsapAnimation() {
+
+  // ScrollTrigger.config({
+  //   // Disables the resfresh even in viewport resize
+  //   autoRefreshEvents: "visibilitychange, DOMContentLoaded, load"
+  // })
+
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+
+    ScrollTrigger.config({
+      // Disables the resfresh even in viewport resize
+      autoRefreshEvents: "visibilitychange, DOMContentLoaded, load"
+    })
+
+  }
+
+
+  let pageLoad = gsap.timeline({
+    defaults: { duration: 0.5, }
+  });
+
+  pageLoad
+    .to('.hero-txt h3', { opacity: 1 })
+    .to('.hero-txt h1', { opacity: 1 })
+    .to('.resume-btn', { opacity: 1 });
+
+
+  let scrollAnim = gsap.timeline({
+    scrollTrigger: {
+      trigger: 'header',
+      scrub: true,
+      start: (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ? '91% bottom' : 'bottom bottom',
+      // start: '91% bottom',
+      end: '+=250',
+      pin: true,
+      pinSpacing: false,
+    }
+  })
+
+  scrollAnim
+    .fromTo('header', { opacity: 1 }, { opacity: 0 })
+
+}
+
+
+function transitions() {
+
 }
