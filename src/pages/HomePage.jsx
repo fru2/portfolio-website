@@ -27,15 +27,14 @@ import { getProjectData } from '../data/data';
 
 export default function HomePage() {
 
-  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
+
+
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
   let timeline = gsap.timeline({ default: { duration: 0.5 } });
 
-
   const expandNavbar = () => {
-    // document.querySelector('.navbar-exp').style.display = 'flex';
-
     timeline
       .to('.navbar-exp', { x: 0 })
       .to('.animate-forward', { opacity: 1, y: 0, stagger: 0.100 });
@@ -43,23 +42,19 @@ export default function HomePage() {
     // for replay of animation
     timeline.timeScale(1);
     timeline.play();
-
-    console.log('expand');
   }
 
   const closeNavbar = () => {
-    // document.querySelector('.navbar-exp').style.display = 'none';
     timeline.timeScale(2);
     timeline.reverse();
   }
 
-
   const scrollToTop = () => {
     gsap.to(window, { duration: 1, scrollTo: 0 });
-    console.log('scroll to top');
   }
 
-  // FIXME: Make the image responsive and add media query for tablet sized devices.
+
+
 
   let data = getProjectData();
 
@@ -112,7 +107,7 @@ export default function HomePage() {
         <h1 className='heading-txt'>Projects</h1>
         {data.map((project) => (
           <Link to={`/projects/${project.pth}`} key={project.id}>
-            <ProjectElements key={project.id} id={project.id} imgSrc={placeholder} title={project.title} desc={project.desc}></ProjectElements>
+            <ProjectElements key={project.id} id={project.id} imgSrc={project.img} title={project.title} desc={project.desc}></ProjectElements>
           </Link>
         ))}
 
