@@ -29,13 +29,28 @@ export default function HomePage() {
 
   gsap.registerPlugin(ScrollTrigger);
 
+
+  let timeline = gsap.timeline({ default: { duration: 0.5 } });
+
+
   const expandNavbar = () => {
-    document.querySelector('.navbar-exp').style.display = 'flex';
+    // document.querySelector('.navbar-exp').style.display = 'flex';
+
+    timeline
+      .to('.navbar-exp', { x: 0 })
+      .to('.animate-forward', { opacity: 1, y: 0, stagger: 0.100 });
+
+    // for replay of animation
+    timeline.timeScale(1);
+    timeline.play();
+
     console.log('expand');
   }
 
   const closeNavbar = () => {
-    document.querySelector('.navbar-exp').style.display = 'none';
+    // document.querySelector('.navbar-exp').style.display = 'none';
+    timeline.timeScale(2);
+    timeline.reverse();
   }
 
   // FIXME: Make the image responsive and add media query for tablet sized devices.
@@ -160,7 +175,6 @@ function gsapAnimation() {
 
 }
 
-
-function transitions() {
+function openNavbarAnim() {
 
 }
