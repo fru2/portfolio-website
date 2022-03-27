@@ -5,7 +5,7 @@ export default function NavBar(props) {
 
     return (
         <nav className='main-nav'>
-            {props.isMain === true ? <NavBarMain onclick={props.onclick} /> : <NavBarWithBack onclick={props.onclick} />}
+            {props.isMain === true ? <NavBarMain onclick={props.onclick} scrolltotop={props.scrolltotop} /> : <NavBarWithBack onclick={props.onclick} />}
         </nav>
     );
 }
@@ -17,10 +17,10 @@ function NavBarMain(props) {
             <button className='icon-btn icon-menu' onClick={props.onclick}>
             </button>
 
-            <img src={Logo} className='branding' alt='branding logo' />
+            <img src={Logo} className='branding' alt='branding logo' onClick={props.scrolltotop} />
 
             <a href='#' className='btn-txt'>
-                GITHUB
+                RÉSUMÉ
             </a>
         </>
     );

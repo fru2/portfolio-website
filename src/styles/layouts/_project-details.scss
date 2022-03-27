@@ -58,7 +58,7 @@
       align-items: flex-start;
       margin-top: 60px;
       flex-wrap: wrap;
-      max-width: 80%;
+      max-width: 85%;
       font-size: 1.2rem;
       line-height: 1.5;
     }
@@ -111,10 +111,10 @@
   .ideation {
 
     .image-container {
-      margin: 0 -80px;
+      margin: 0 -120px;
       margin-top: 80px;
       aspect-ratio: 16 / 9;
-      width: calc(100% + 160px);
+      width: calc(100% + 240px);
       background-color: constants.$grey;
     }
   }

@@ -2,21 +2,28 @@
 @use "../constants";
 
 header {
-  height: 100vh !important;
+  height: 100vh;
   width: 100%;
   // background: constants.$primary-gradient;
-  @include mixins.flex(row);
+  @include mixins.flex(column);
 
   h3 {
-    @include mixins.font-size(32);
+    @include mixins.font-size(28);
     font-weight: 200;
     color: constants.$dull-white;
+    text-align: center;
+    opacity: 0;
+    // mix-blend-mode: difference;
   }
 
 
   h1 {
     @include mixins.font-size(54);
     margin-top: -1.6rem;
+    opacity: 0;
+
+
+    // mix-blend-mode: difference;
   }
 
   .social-links {
@@ -24,24 +31,45 @@ header {
     bottom: 0;
     right: 0;
     padding: 1.5rem 2rem;
+    @include mixins.flex(row);
+    align-items: center;
+    justify-content: center;
   }
 
   .social-links a {
-    display: inline-block;
     width: 20px;
     height: 20px;
+    object-fit: contain;
   }
 
   .social-links a:first-child {
-    margin-right: 1rem;
+    margin-right: 1.5rem;
+  }
+
+  .social-links a:last-child {
+    width: 32px;
+    height: 32px;
   }
 
   .hero-image {
+    position: absolute;
+    z-index: -100;
     height: 65vh;
-    width: 65vh;
-    background-color: constants.$dull-white;
-    margin-right: 80px;
+    width: 280px;
+    background-color: #FFF;
+    // margin-right: 80px;
   }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .resume-btn {
+    opacity: 0;
+  }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -55,6 +83,7 @@ header {
     padding: 32px;
     box-sizing: border-box;
     text-align: center;
+    height: 100vh !important;
     // align-items: center;
 
 
@@ -67,11 +96,20 @@ header {
       margin-top: -5rem;
     }
 
+    // .
+
     .hero-image {
-      height: 80vw;
-      width: 80vw;
+      height: 40vh;
+      width: 45vw;
+      max-width: 280px;
+      margin-top: -5rem;
       margin-right: 0;
-      display: none;
+      // display: none;
     }
+
+    .resume-btn {
+      margin-top: 1.5rem;
+    }
+
   }
 }

@@ -4,49 +4,86 @@ import ProjectElements from "../components/ProjectsElement";
 import WorkFlow from "../components/WorkFlow";
 import ButtonOutline from '../components/ButtonOutline';
 import NavExtended from "../components/NavBarExpanded";
+import ParallaxGallery from '../components/ParallaxGallery';
 
+
+// media files
 import placeholder from "../assets/images/placeholder.png";
-
 import BehanceLogo from '../assets/icons/behance.svg';
 import CodepenLogo from '../assets/icons/codepen.svg';
 
+//plugins
 import { Link, Outlet } from 'react-router-dom';
+import { gsap, ScrollTrigger, ScrollToPlugin } from 'gsap/all';
+// import ScrollTrigger from 'gsap/ScrollTrigger';
 
+import { useEffect } from 'react';
+
+//data
 import { getProjectData } from '../data/data';
+
+
+
 
 export default function HomePage() {
 
+
+
+
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+  let timeline = gsap.timeline({ default: { duration: 0.5 } });
+
   const expandNavbar = () => {
-    document.querySelector('.navbar-exp').style.display = 'flex';
-    console.log('expand');
+    timeline
+      .to('.navbar-exp', { x: 0 })
+      .to('.animate-forward', { opacity: 1, y: 0, stagger: 0.100 });
+
+    // for replay of animation
+    timeline.timeScale(1);
+    timeline.play();
   }
 
   const closeNavbar = () => {
-    document.querySelector('.navbar-exp').style.display = 'none';
+    timeline.timeScale(2);
+    timeline.reverse();
   }
 
-  // FIXME: Make the image responsive and add media query for tablet sized devices.
+  const scrollToTop = () => {
+    gsap.to(window, { duration: 1, scrollTo: 0 });
+  }
+
+
 
 
   let data = getProjectData();
 
+
+  useEffect(() => {
+    gsapAnimation();
+  }, []); // empty array means 'run once'
+
   return (
     <main>
       <NavExtended onclick={closeNavbar} />
-      <NavBar isMain={true} onclick={expandNavbar} />
+      <NavBar isMain={true} onclick={expandNavbar} scrolltotop={scrollToTop} />
 
 
       <header>
-        <div className="hero-image"></div>
+        {/* <div className="hero-image">
+          <img src={placeholder} alt="placeholder" />
+        </div> */}
 
         <div className="hero-txt">
           <h3>Hi</h3>
           <h1>I'm Utsav</h1>
         </div>
-
+        <div className="outline-btn resume-btn">
+          Contact
+        </div>
         <div className="social-links">
-          <a href="https://codepen.com/" target="_blank" rel="noopener noreferrer"><img src={CodepenLogo} alt="Codepen nav link" /></a>
-          <a href="https://behance.net/" target="_blank" rel="noopener noreferrer"><img src={BehanceLogo} alt="Behance nav link" /></a>
+          <a href="https://codepen.io/fru2" target="_blank" rel="noopener noreferrer"><img src={CodepenLogo} alt="Codepen nav link" /></a>
+          <a href="https://www.behance.net/fru2" target="_blank" rel="noopener noreferrer"><img src={BehanceLogo} alt="Behance nav link" /></a>
         </div>
 
       </header>
@@ -59,7 +96,8 @@ export default function HomePage() {
           <ButtonToggle text="Front-end" />
           <ButtonToggle text="UX-UI" />
         </div>
-        {/* <ParallaxGallery img1={} img2={} img3={}/> */}{/* DO NOT UNCOMMENT */}
+
+        <ParallaxGallery img0={placeholder} img1={placeholder} img2={placeholder} />
       </section>
 
 
@@ -69,7 +107,7 @@ export default function HomePage() {
         <h1 className='heading-txt'>Projects</h1>
         {data.map((project) => (
           <Link to={`/projects/${project.pth}`} key={project.id}>
-            <ProjectElements key={project.id} id={project.id} imgSrc={placeholder} title={project.title} desc={project.desc}></ProjectElements>
+            <ProjectElements key={project.id} id={project.id} imgSrc={project.img} title={project.title} desc={project.desc}></ProjectElements>
           </Link>
         ))}
 
@@ -86,9 +124,54 @@ export default function HomePage() {
       <section className='contact-section container' id="contact-section">
         <h1 className='heading-txt'>Let's connect</h1>
         <p className='body-txt'>If you have reached this far, then wouldn't it be great if we can have a chat. Or maybe we can work together to build something ;)</p>
-        <ButtonOutline text="Email" />
+        <ButtonOutline text="Contact" />
       </section>
 
     </main>
   );
+}
+
+
+function gsapAnimation() {
+
+  // ScrollTrigger.config({
+  //   // Disables the resfresh even in viewport resize
+  //   autoRefreshEvents: "visibilitychange, DOMContentLoaded, load"
+  // })
+
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+
+    ScrollTrigger.config({
+      // Disables the resfresh even in viewport resize
+      autoRefreshEvents: "visibilitychange, DOMContentLoaded, load"
+    })
+
+  }
+
+
+  let pageLoad = gsap.timeline({
+    defaults: { duration: 0.5, }
+  });
+
+  pageLoad
+    .to('.hero-txt h3', { opacity: 1 })
+    .to('.hero-txt h1', { opacity: 1 })
+    .to('.resume-btn', { opacity: 1 });
+
+
+  let scrollAnim = gsap.timeline({
+    scrollTrigger: {
+      trigger: 'header',
+      scrub: true,
+      start: (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ? '91% bottom' : 'bottom bottom',
+      // start: '91% bottom',
+      end: '+=250',
+      pin: true,
+      pinSpacing: false,
+    }
+  })
+
+  scrollAnim
+    .fromTo('header', { opacity: 1 }, { opacity: 0 })
+
 }

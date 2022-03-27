@@ -5,6 +5,7 @@
   @include mixins.flex(row);
   position: fixed;
   width: 100%;
+  top: 0;
   justify-content: space-between;
   z-index: 100;
 
@@ -35,7 +36,6 @@
 
 
   img {
-
     margin-top: 0.5rem;
     height: 2.5rem;
     position: absolute;
@@ -43,6 +43,8 @@
     right: 0;
     margin-left: auto;
     margin-right: auto;
+    z-index: 1000;
+    pointer-events: all !important;
   }
 
   a {
