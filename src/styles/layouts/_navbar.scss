@@ -36,7 +36,6 @@
 
 
   img {
-
     margin-top: 0.5rem;
     height: 2.5rem;
     position: absolute;
@@ -44,6 +43,8 @@
     right: 0;
     margin-left: auto;
     margin-right: auto;
+    z-index: 1000;
+    pointer-events: all !important;
   }
 
   a {

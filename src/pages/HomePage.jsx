@@ -14,7 +14,7 @@ import CodepenLogo from '../assets/icons/codepen.svg';
 
 //plugins
 import { Link, Outlet } from 'react-router-dom';
-import { gsap, ScrollTrigger } from 'gsap/all';
+import { gsap, ScrollTrigger, ScrollToPlugin } from 'gsap/all';
 // import ScrollTrigger from 'gsap/ScrollTrigger';
 
 import { useEffect } from 'react';
@@ -27,7 +27,7 @@ import { getProjectData } from '../data/data';
 
 export default function HomePage() {
 
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 
   let timeline = gsap.timeline({ default: { duration: 0.5 } });
@@ -53,6 +53,12 @@ export default function HomePage() {
     timeline.reverse();
   }
 
+
+  const scrollToTop = () => {
+    gsap.to(window, { duration: 1, scrollTo: 0 });
+    console.log('scroll to top');
+  }
+
   // FIXME: Make the image responsive and add media query for tablet sized devices.
 
   let data = getProjectData();
@@ -65,7 +71,7 @@ export default function HomePage() {
   return (
     <main>
       <NavExtended onclick={closeNavbar} />
-      <NavBar isMain={true} onclick={expandNavbar} />
+      <NavBar isMain={true} onclick={expandNavbar} scrolltotop={scrollToTop} />
 
 
       <header>
@@ -172,9 +178,5 @@ function gsapAnimation() {
 
   scrollAnim
     .fromTo('header', { opacity: 1 }, { opacity: 0 })
-
-}
-
-function openNavbarAnim() {
 
 }
