@@ -1,5 +1,3 @@
-import PlaceholderImg from '../assets/images/UI.jpg';
-
 let dataObject = [
 
   {

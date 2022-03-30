@@ -19,7 +19,7 @@ function NavBarMain(props) {
 
             <img src={Logo} className='branding' alt='branding logo' onClick={props.scrolltotop} />
 
-            <a href='#' className='btn-txt'>
+            <a href='https://drive.google.com/file/d/1m97j7zbB5zv2n_LZQTCuBcXe3MezT8Ej/view?usp=sharing' className='btn-txt' target='_blank'>
                 RÉSUMÉ
             </a>
         </>
