@@ -70,6 +70,16 @@ header {
     opacity: 0;
   }
 
+
+  // FIXME: Remove this block of code if possible and add it into links file.
+  .resume-btn:hover {
+    a {
+      color: constants.$black !important;
+      transition: 150ms;
+    }
+  }
+
+
 }
 
 @media screen and (max-width: 768px) {
