@@ -2,6 +2,7 @@
 
 .outline-btn {
   min-width: 10rem;
+  width: max-content;
   cursor: pointer;
   color: constants.$white;
   font-family: 'Poppins', sans-serif;
@@ -24,14 +25,9 @@
 
 
 .btn-active {
-  // min-width: 10rem;
   background: constants.$white;
   color: constants.$black;
-  padding: 0.5rem 3rem;
-  font-family: 'Poppins', sans-serif;
   border-radius: 16px;
-  font-size: 1.0rem;
-  text-transform: uppercase;
 }
 
 

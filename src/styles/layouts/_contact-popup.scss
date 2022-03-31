@@ -1,0 +1,88 @@
+@use "../constants";
+
+.contact-popup {
+
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100000;
+
+  .backdrop {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000cb;
+    z-index: -1;
+    cursor: pointer;
+  }
+
+  div:nth-child(2) {
+    height: auto;
+    width: 80%;
+    padding: 2rem;
+    box-sizing: border-box;
+    background-color: #17191f;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: constants.$white;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 1rem 2rem;
+
+    font-size: 1.5rem;
+    height: 2.8rem;
+    width: 2.8rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  span {
+    text-decoration: underline;
+    padding: 0rem 0.3rem;
+  }
+
+  img {
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    padding: 0.6rem;
+    min-width: auto !important;
+    margin-left: 2rem;
+    pointer-events: all;
+    opacity: 0.7;
+  }
+
+  img:hover {
+    background-color: #2e323b;
+  }
+
+}
+
+
+@media screen and (max-width: 768px) {
+  .contact-popup {
+    div:nth-child(2) {
+      flex-direction: column;
+    }
+  }
+}

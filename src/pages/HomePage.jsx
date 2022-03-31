@@ -1,8 +1,6 @@
 import NavBar from '../components/NavBar';
-import ButtonToggle from '../components/ButtonToggle';
 import ProjectElements from "../components/ProjectsElement";
 import WorkFlow from "../components/WorkFlow";
-import ButtonOutline from '../components/ButtonOutline';
 import NavExtended from "../components/NavBarExpanded";
 import ParallaxGallery from '../components/ParallaxGallery';
 
@@ -17,17 +15,16 @@ import { Link, Outlet } from 'react-router-dom';
 import { gsap, ScrollTrigger, ScrollToPlugin } from 'gsap/all';
 // import ScrollTrigger from 'gsap/ScrollTrigger';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 //data
 import { getProjectData } from '../data/data';
+import ContactPopup from '../components/ContactPopup';
 
 
 
 
 export default function HomePage() {
-
-
 
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -54,8 +51,6 @@ export default function HomePage() {
   }
 
 
-
-
   let data = getProjectData();
 
 
@@ -63,8 +58,39 @@ export default function HomePage() {
     gsapAnimation();
   }, []); // empty array means 'run once'
 
+
+
+  const [isOpen, setIsOpen] = useState(false);
+  const showPopup = () => {
+    setIsOpen(true);
+  }
+  const hidePopup = () => {
+    console.log('hide clicked');
+    setIsOpen(false);
+  }
+
+
+  let buttonState = localStorage.getItem('buttonState');
+
+  const [isSelected, setIsSelected] = useState((buttonState === null ? 'frontend' : localStorage.getItem('buttonState')));
+
+  const selectUI = () => {
+    setIsSelected('uiux');
+    localStorage.setItem('buttonState', 'uiux');
+  }
+  const selectFrontend = () => {
+    setIsSelected('frontend');
+    localStorage.setItem('buttonState', 'frontend');
+  }
+
+
+
   return (
     <main>
+
+      {isOpen === true ? <ContactPopup cross={hidePopup} /> : null}
+
+
       <NavExtended onclick={closeNavbar} />
       <NavBar isMain={true} onclick={expandNavbar} scrolltotop={scrollToTop} />
 
@@ -78,8 +104,8 @@ export default function HomePage() {
           <h3>Hi</h3>
           <h1>I'm Utsav</h1>
         </div>
-        <div className="outline-btn resume-btn">
-          Contact
+        <div className="outline-btn resume-btn" onClick={showPopup}>
+          <a href="mailto:utsavfrutu@gmail.com">Contact</a>
         </div>
         <div className="social-links">
           <a href="https://codepen.io/fru2" target="_blank" rel="noopener noreferrer"><img src={CodepenLogo} alt="Codepen nav link" /></a>
@@ -93,8 +119,12 @@ export default function HomePage() {
         {/* <h1 className='heading-txt'></h1> */} {/* DO NOT UNCOMMENT */}
         <p className='body-txt'>I love creating, whether it's writing code for a website or making an art piece. Click a category below to view projects related to that.</p>
         <div>
-          <ButtonToggle text="Front-end" />
-          <ButtonToggle text="UX-UI" />
+          <button className={`outline-btn ${isSelected === 'frontend' ? 'btn-active' : ''}`} onClick={selectFrontend}>
+            FRONT-END
+          </button>
+          <button className={`outline-btn ${isSelected === 'uiux' ? 'btn-active' : ''}`} onClick={selectUI}>
+            UI-UX
+          </button>
         </div>
 
         <ParallaxGallery img0={placeholder} img1={placeholder} img2={placeholder} />
@@ -124,8 +154,11 @@ export default function HomePage() {
       <section className='contact-section container' id="contact-section">
         <h1 className='heading-txt'>Let's connect</h1>
         <p className='body-txt'>If you have reached this far, then wouldn't it be great if we can have a chat. Or maybe we can work together to build something ;)</p>
-        <ButtonOutline text="Contact" />
+        <button className="outline-btn resume-btn" onClick={showPopup}>
+          <a href="mailto:utsavfrutu@gmail.com">Contact</a>
+        </button>
       </section>
+
 
     </main>
   );

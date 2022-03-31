@@ -17,7 +17,9 @@ export default function NavBarExpanded(props) {
 
       <ul>
         <li className='animate-forward'>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur ipsam facilis quas vel rerum, ducimus harum hic aliquam mollitia sequi aperiam eius fuga? Unde, maiores. Aperiam eaque illum eos.</p>
+          {/* TODO: Change this paragaph to either some cathchy text or a list of sub navitaion, whicher fits best. */}
+
+          {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur ipsam facilis quas vel rerum, ducimus harum hic aliquam mollitia sequi aperiam eius fuga? Unde, maiores. Aperiam eaque illum eos.</p> */}
         </li>
         <li className='animate-forward'>
           <p>Copywrite 2022 ©Utsav-Anand</p>
