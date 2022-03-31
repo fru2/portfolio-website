@@ -1,5 +1,4 @@
 import NavBar from '../components/NavBar';
-import ButtonToggle from '../components/ButtonToggle';
 import ProjectElements from "../components/ProjectsElement";
 import WorkFlow from "../components/WorkFlow";
 import NavExtended from "../components/NavBarExpanded";
@@ -60,16 +59,31 @@ export default function HomePage() {
   }, []); // empty array means 'run once'
 
 
-  const [isOpen, setIsOpen] = useState(false);
 
+  const [isOpen, setIsOpen] = useState(false);
   const showPopup = () => {
     setIsOpen(true);
   }
-
   const hidePopup = () => {
     console.log('hide clicked');
     setIsOpen(false);
   }
+
+
+  let buttonState = localStorage.getItem('buttonState');
+
+  const [isSelected, setIsSelected] = useState((buttonState === null ? 'frontend' : localStorage.getItem('buttonState')));
+
+  const selectUI = () => {
+    setIsSelected('uiux');
+    localStorage.setItem('buttonState', 'uiux');
+  }
+  const selectFrontend = () => {
+    setIsSelected('frontend');
+    localStorage.setItem('buttonState', 'frontend');
+  }
+
+
 
   return (
     <main>
@@ -105,8 +119,12 @@ export default function HomePage() {
         {/* <h1 className='heading-txt'></h1> */} {/* DO NOT UNCOMMENT */}
         <p className='body-txt'>I love creating, whether it's writing code for a website or making an art piece. Click a category below to view projects related to that.</p>
         <div>
-          <ButtonToggle text="Front-end" />
-          <ButtonToggle text="UX-UI" />
+          <button className={`outline-btn ${isSelected === 'frontend' ? 'btn-active' : ''}`} onClick={selectFrontend}>
+            FRONT-END
+          </button>
+          <button className={`outline-btn ${isSelected === 'uiux' ? 'btn-active' : ''}`} onClick={selectUI}>
+            UI-UX
+          </button>
         </div>
 
         <ParallaxGallery img0={placeholder} img1={placeholder} img2={placeholder} />
