@@ -122,9 +122,9 @@ export default function HomePage() {
           <button className={`outline-btn ${isSelected === 'frontend' ? 'btn-active' : ''}`} onClick={selectFrontend}>
             FRONT-END
           </button>
-          <button className={`outline-btn ${isSelected === 'uiux' ? 'btn-active' : ''}`} onClick={selectUI}>
+          {/* <button className={`outline-btn ${isSelected === 'uiux' ? 'btn-active' : ''}`} onClick={selectUI}>
             UI-UX
-          </button>
+          </button> */}
         </div>
 
         <ParallaxGallery img0={placeholder} img1={placeholder} img2={placeholder} />
