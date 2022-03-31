@@ -29,6 +29,7 @@
     align-items: center;
 
     margin-top: 10rem;
+    margin-bottom: 6rem;
 
     img {
       object-fit: cover;
@@ -76,6 +77,8 @@
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr;
       margin-top: 4rem;
+
+      margin-bottom: 0rem !important;
 
       .img1 {
         grid-column: 1/3;
