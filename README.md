@@ -1,4 +1,4 @@
-This is my [portfolio website](https://utsav-anand.com) which is built with [create-react-app](https://create-react-app.dev) which uses [SCSS](https://sass-lang.com) for styling and [GSAP](https://greensock.com/gsap/) for animation.
+This is my [portfolio website](https://utsav-anand.com) which is built with [create-react-app](https://create-react-app.dev) & uses [SCSS](https://sass-lang.com) for styling and [GSAP](https://greensock.com/gsap/) for animation.
 
 
 ## How to run the web app:
